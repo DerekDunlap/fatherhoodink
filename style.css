@@ -1,0 +1,35 @@
+body {
+    margin: 0 auto;
+    background-color: #FFF0CE;
+    font-size: 2.5rem;
+    color:#00394F;
+    font-family: "Dongle", sans-serif;
+}
+
+img {
+    max-width: 100%;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center   ;
+}
+
+a {
+    text-decoration: none;
+    color:#00394F;
+}
+
+.header{
+    margin: 0 auto;
+    padding: 3rem 15rem;
+    background-color: #FFFFFF;
+}
+
+.fatherhood-logo-container {
+    font-family: "Modak", system-ui;
+    font-weight: 400;
+    font-size: 3.5rem;
+}
+
