@@ -1,8 +1,7 @@
 body {
     margin: 0 auto;
-    background-color: #FFF0CE;
+    background-color: #341C77;
     font-size: 2.5rem;
-    color:#00394F;
     font-family: "Dongle", sans-serif;
 }
 
@@ -18,18 +17,60 @@ img {
 
 a {
     text-decoration: none;
-    color:#00394F;
+    color:#8E89C0;
 }
 
 .header{
     margin: 0 auto;
-    padding: 3rem 15rem;
-    background-color: #FFFFFF;
+    padding: 3rem 8rem;
 }
 
 .fatherhood-logo-container {
     font-family: "Modak", system-ui;
     font-weight: 400;
-    font-size: 3.5rem;
+    font-size: 3rem;
+}
+
+.nav-link {
+    position: relative;
+    display: inline;
+    color: #8E89C0;
+    cursor: pointer;
+    padding: 10px 20px;
+  }
+
+.nav-link::before{
+    content: '';
+    position: absolute;
+    top: 28%;
+    left: 30%;
+    width: 2.2rem;
+    height: 2.2rem;
+    aspect-ratio: 1;
+    background: orange;
+    clip-path: polygon(50% 0,79% 90%,2% 35%,98% 35%,21% 90%); 
+    transform: scale(0);
+    transition: 0.1ms;
+    z-index: -1;
+    border-radius: 5rem;
+}
+
+.nav-link:hover::before {
+    transform: scale(1);
+}
+
+.hero-div{
+    display: flex;
+    justify-content: space-around;
+}
+
+.hero-img img {
+    max-width: 50%;
+    border-radius: 4%;
+}
+
+.hero-div p {
+    max-width: 50%;
+    color: #8E89C0;
 }
 
