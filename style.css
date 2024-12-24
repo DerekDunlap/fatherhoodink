@@ -34,6 +34,13 @@
         - VMax - Based on the bigger attribute ( VH > VW or VW > VH)
         - VMin - Based on the smaller attribute ( VH < VW or VW < VH)
         - Beware: This can create problems on mobile devices! (Use with media query to correct issue)
+
+    7) Spacing between columns (Example -> Use gap: 10rem)
+    8) Breakpoints:
+        - 
+        -
+        -
+        -
 */
 
 /* --------> Beginning of General Styling (Useful for all websites) <-------- */
@@ -62,7 +69,7 @@ body {
 
 img {
     /* Default styling -> max-width: 100% */
-    max-width: 45%;
+    max-width: 100%;
     border-radius: 1.25rem;
 }
 
@@ -82,10 +89,7 @@ a {
 
 .row {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 3em 6em;
-    gap: 10rem;
+    
 }
 
 /* --------> End of General Styling Section <-------- */
@@ -94,6 +98,7 @@ a {
 .header{
     padding: 1.125em 4em;
     background: var(--pri-color);
+    justify-content: space-between;
 }
 
 h1 {
@@ -110,15 +115,53 @@ h2 {
     font-weight: 500;
     font-size: 3rem;
 }
+
+.nav-link{
+    position: relative;
+    display: inline;
+    color: var(--light-color);
+    cursor: pointer;
+    padding: .2rem .2rem;
+    z-index: 1;
+  }
+
+.nav-link::before{
+    content: '';
+    position: absolute;
+    top: 15%;
+    left: 30%;
+    width: 2.5rem;
+    height: 2.5rem;
+    aspect-ratio: 1;
+    background: var(--bold-text);
+    clip-path: polygon(50% 0,79% 90%,2% 35%,98% 35%,21% 90%); 
+    transform: scale(0);
+    transition: 0.3s;
+    z-index: -1;
+    border-radius: 20%;
+}
+
+.nav-link:hover::before,
+.nav-link:active::before {
+    transform: scale(1);
+}
 /* --------> End of Header(Navbar) Styling Section <-------- */
 
 /* --------> Start of Hero Styling Section <-------- */
 .hero-div {
     background:var(--pri-color);
+    justify-content: space-between;
+    align-items: center;
+    padding: 3em 6em;
+    gap: 10rem;
 }
 
 .hero-content h2, p{
     margin-top: 0;
+}
+
+.hero-img {
+    max-width: 45%;
 }
 
 .btn {
@@ -142,44 +185,36 @@ h2 {
 /* --------> Start of Primary Content Styling Section <-------- */
 .primary-content {
     background-color: var(--light-color);
-    color:var(--gray-text)
+    color:var(--gray-text);
+    justify-content: space-between;
+    align-items: center;
+    padding: 3em 6em;
+    gap: 10rem;
 }
 
 .primary-img {
     max-width: 45%;
 }
 
+@media (max-width: 600px) {
+    .row {
+        display: block;
+    }
+
+    .hero-img,
+    .primary-img {
+        max-width: 100%;
+    }
+
+    .hero-div,
+    .primary-content {
+        padding: 1.25em 1.25em;
+    }
+}
+
 /* --------> End of Primary Content Styling Section <-------- */
 
-/*
-.nav-link {
-    position: relative;
-    display: inline;
-    color: #8E89C0;
-    cursor: pointer;
-    padding: .2rem .2rem;
-  }
-
-.nav-link::before{
-    content: '';
-    position: absolute;
-    top: 20%;
-    left: 30%;
-    width: 2.5rem;
-    height: 2.5rem;
-    aspect-ratio: 1;
-    background: orange;
-    clip-path: polygon(50% 0,79% 90%,2% 35%,98% 35%,21% 90%); 
-    transform: scale(0);
-    transition: 0.1ms;
-    z-index: -1;
-    border-radius: 5rem;
-}
-
-.nav-link:hover::before {
-    transform: scale(1);
-}
-
+/* 
 .hero-img img {
     border-radius: 2%;
 }
