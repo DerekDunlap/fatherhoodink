@@ -44,14 +44,7 @@
 */
 
 /* --------> Beginning of General Styling (Useful for all websites) <-------- */
-:root {
-    --pri-color: #024CAA;
-    --sec-color: #86A7FC;
-    --bold-text: #EC8305;
-    --light-color: #FFFFFF;
-    --gray-text: #312F30;
-    /* #FFDD95, FF9843*/
-}
+
 
 *, *::before, *::after {
     /* Default styling -> box-sizing: border-box */
@@ -196,7 +189,7 @@ h2 {
     max-width: 45%;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 900px) {
     .row {
         display: block;
     }
