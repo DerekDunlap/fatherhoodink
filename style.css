@@ -1,19 +1,57 @@
+/* 
+   1) Use percentages for widths instead of fixed pixels values.
+
+   2) Avoid setting heights in webpages!! (Rare use cases for height)
+
+   3) Use padding to add more height to an element (Example: padding: 5em or 5rem)
+
+   4) Em vs Rem:
+        ---> EM: 
+            - 1em which is in relation to the parent element (default to 16px).
+            - Compounding effect which can cause issues for font sizes.
+            - Don't use as font-size, due to compounding effect!
+            --- Use Cases ---
+                1) Padding (Great for padding)
+                2) Margin
+                3) Font-sizes (Not recommended)
+        ---> REM:
+            - 1rem is in relation to the root element or html
+            - More Consistent sizing and spacing!
+            - Fixes compounding issue introduced by em
+            --- Use Cases ---
+                1) Font-sizes
+                2) Margin
+                3) Padding (Not recommended)
+
+    5) Using Max-Width on webpages:
+        - Stops elements from stretching unnaturally and distorting the viewport.
+
+    6) CSS Units: vh, vw, vmin, vmax
+        - VH - Used to keep viewport height consistent based on the overall site size (Fullscreen and resizing window size)
+            -> -> Can be used for padding
+        - VW - Used to keep viewport width consistent based on the overall site size (Fullscreen and resizing window size)
+            -> Can be used instead of width or max-width
+        - VMax - Based on the bigger attribute ( VH > VW or VW > VH)
+        - VMin - Based on the smaller attribute ( VH < VW or VW < VH)
+        - Beware: This can create problems on mobile devices! (Use with media query to correct issue)
+*/
+
+/* --------> Beginning of General Styling (Useful for all websites) <-------- */
+*, *::before, *::after {
+    /* Default styling -> box-sizing: border-box */
+    box-sizing: border-box;
+}
+
 body {
+    /* Default styling -> margin: 0, font-family: sans-serif */
     margin: 0;
-    background-color: #341C77;
     font-size: 2.5rem;
     font-family: "Dongle", sans-serif;
 }
 
 img {
+    /* Default styling -> max-width: 100% */
     max-width: 100%;
-}
-
-.container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0 auto;
 }
 
 a {
@@ -21,17 +59,32 @@ a {
     color:#8E89C0;
 }
 
-.header{
-    max-width: 75%;
-    padding: 3rem 0rem;
+.container {
+    /* Default styling -> margin: 0 auto */
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
-.fatherhood-logo-container {
+/* --------> End of General Styling Section <-------- */
+
+.header{
+    display: flex;
+    max-width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 5em;
+    background: #351C77;
+}
+
+.fatherhood-logo{
     font-family: "Modak", system-ui;
     font-weight: 400;
     font-size: 3rem;
+    color: #8E89C0;
 }
 
+/*
 .nav-link {
     position: relative;
     display: inline;
@@ -61,7 +114,7 @@ a {
 }
 
 .hero-div{
-    max-width: 90%;
+    max-width: 60%;
     gap: 10rem;
 }
 
@@ -71,6 +124,10 @@ a {
 
 .hero-img img {
     border-radius: 2%;
+}
+
+.hero-content {
+    max-width: 100%;
 }
 
 .hero-div h2 {
@@ -90,5 +147,5 @@ a {
 
 .primary-content {
     background: #ffff;
-}
+} */
 
