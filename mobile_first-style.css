@@ -25,7 +25,7 @@ body {
 .container {
     width: 100%;
     margin: 0 auto;
-    padding: 1.3125em 1em;
+    padding: 1.3125em 1.75em;
 }
 
 img {
@@ -41,7 +41,7 @@ a {
 h2 {
     margin: 0;
     font-weight: 700;
-    font-size: 1.875em;
+    font-size: 3rem;
 }
 
 .header {
@@ -62,6 +62,24 @@ h2 {
     background: var(--pri-color);
 }
 
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 700;
+    background-color:var(--bold-text);
+    color:var(--light-color);
+    padding: .25em 1.125em;
+    border-radius: 3rem;
+}
+
+.btn:hover,
+ .btn:focus {
+    transition-property: 1ms;
+    background-color:var(--light-text);
+    color:var(--dark-text)
+}
+
 .accent-text {
     color: var(--bold-text);
 }
@@ -78,4 +96,13 @@ h2 {
     background: var(--alt-light-bg)
 }
 
+.footer {
+    background: var(--pri-color);
+    padding: .5em .3em;
+}
 
+.footer p {
+    margin: 0;
+    text-align: center;
+    color:var(--light-text)
+}
