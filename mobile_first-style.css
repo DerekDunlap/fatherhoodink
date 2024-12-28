@@ -52,16 +52,43 @@ p {
 
 /* Header Section (Navbar & Logo) */
 .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
     background: var(--pri-color);
-    padding: 1em 2em;
-    text-align: left;
+    padding: .7em .6em;
     text-transform: uppercase;
-    letter-spacing: .25rem;
+    letter-spacing: .125rem;
+    white-space: nowrap;
 }
 
-.fatherhood-logo {
+.mobile-hamburger-nav {
+    display: flex;
+    flex-direction: column;
+    gap: .3rem
+}
+
+.nav-item {
+    column-gap: 1rem;
+    height: .1875rem;
+    width: 1.25rem;
+    background: var(--light-text);
+}
+
+.logo {
     font-family: "DynaPuff", serif;
-    font-size: 2rem;
+    font-size: 1.5rem;
+    flex-grow: 2;
+    text-align: center;
+}
+
+.logo a {
+    margin: 0 auto;
+}
+
+.desktop-nav {
+    display: none;
 }
 
 /* Hero & Carousel Section */
@@ -77,7 +104,7 @@ p {
 
 .hero-carousel-slider {
     display: flex;
-    aspect-ratio: 4/3;
+    aspect-ratio: 4/3; 
     overflow: hidden;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
@@ -118,7 +145,7 @@ p {
     
 }
 
-.hero-carousel-nav {
+/* .hero-carousel-nav {
     display: flex;
     position: absolute;
     column-gap: 1rem;
@@ -139,7 +166,7 @@ p {
 
 .hero-carousel-nav a:hover {
     opacity: 1;
-}
+} */
 
 .btn {
     display: inline-block;
