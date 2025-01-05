@@ -56,7 +56,8 @@ p {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 2rem;
+    padding: 1em;
+    gap: 1rem;
     background: var(--pri-color);
     text-transform: uppercase;
     letter-spacing: .125rem;
