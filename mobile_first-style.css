@@ -1,12 +1,12 @@
 /* General Styling Settings */
 :root {
-    --pri-color:#024CAA;
+    --pri-color:#351c77;
     --sec-color:#86A7FC;
     --bold-text:#EC8305;
-    --light-text:#FFFFFF;
+    --light-text:#ffffff;
     --dark-text:#312F30;
-    --light-bg-color:#FFDD95;
-    --alt-light-bg:#80C4E9;
+    --light-bg-color:#fff6e9;
+    --alt-light-bg:#bcb2ee;
     --dark-bg-color:#FF9843;
     /* , FF9843*/
 }
@@ -170,7 +170,18 @@ p {
 }
 
 /* Additional Content Section */
-.secondary-content {
+.secondary-inner-div {
+    text-align: center;
+}
+
+.fa-shapes, .fa-school, .fa-music {
+    color: var(--bold-text);
+    font-weight: 600;
+    font-size: 3rem;
+    margin: .75em 0;
+}
+
+.third-content {
     background: var(--light-bg-color);
 }
 
@@ -239,7 +250,7 @@ p {
     }
 
     .primary-content,
-    .secondary-content, .third-content {
+    .secondary-content, .third-content, .fourth-content {
         justify-content: center;
         align-items: center;
         padding: 3em 4em ;
@@ -247,7 +258,7 @@ p {
     }
 
     .primary-text,
-    .secondary-text, .third-text {
+    .secondary-text, .third-text, .fourth-text {
         max-width: 35%;
     }
 
@@ -305,20 +316,27 @@ p {
     }
 
     .primary-content,
-    .secondary-content, .third-content {
+    .secondary-content, .third-content, .fourth-content {
         justify-content: center;
         align-items: center;
-        padding: 3em 15em ;
+        padding: 3em 5em ;
         gap: 5rem
     }
 
+    .secondary-content {
+        justify-content: center;
+        align-items: center;
+        padding: 1.5em 10em ;
+        gap: 5rem;
+    }
+
     .primary-text,
-    .secondary-text, .third-text {
+    .secondary-text, .third-text, .fourth-text {
         max-width: 35%;
     }
 
     .img-container {
-        max-width: 45%;
+        max-width: 35%;
     }
 
 }
