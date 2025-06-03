@@ -22,7 +22,7 @@ const months = [
 ];
 
 const generateCalendar = () => {
-    let firstDay = new Date(year, month, 1).getDate();
+    let firstDay = new Date(year, month, 1).getDay();
     let lastDay = new Date(year, month + 1, 0).getDate();
     let dayend = new Date(year, month, lastDay).getDay();
     let monthLastDate = new Date(year, month, 0).getDate();
